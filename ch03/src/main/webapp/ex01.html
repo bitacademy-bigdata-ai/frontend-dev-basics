@@ -45,22 +45,23 @@ body {
 </style>
 <script>
 function onClicked() {
-	elDiv = document.getElementById("my-div");
-	
-	marginTop = parseInt(elDiv.style.marginTop);
-	marginTop -= 10;
-	elDiv.style.marginTop = marginTop + "px";
+
+	intervalId = setInterval(function() {
+		
+		elDiv = document.getElementById("my-div");
+		marginTop = parseInt(elDiv.style.marginTop);
+
+		if(marginTop == -80) {
+			clearInterval(intervalId);
+			return;
+		}
+		
+		marginTop -= 10;
+		elDiv.style.marginTop = marginTop + "px";
+		console.log(marginTop);
+		
+	}, 10);
 }
-
-i = 0;
-setInterval(function() {
-	i++;
-	console.log("!!!!" + i);	
-}, 1000);
-
-
-console.log("some codes");
-
 </script>
 </head>
 <body>
