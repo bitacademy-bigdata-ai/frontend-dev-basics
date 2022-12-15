@@ -67,16 +67,22 @@ var sum = function() {
     //    s += e;
     // });
 
-    
+    Array.prototype.forEach.call(arguments, function(e){
+        s += e;
+    })
 
     return s;
 }
 
 
-// console.log(sum(1));
-// console.log(sum(1, 2));
+console.log(sum(1));
+console.log(sum(1, 2));
 console.log(sum(1, 2, 3, 4));
-// console.log(sum(1, 2, 3, 4, 5, 6));
+console.log(sum(1, 2, 3, 4, 5, 6));
+
+
+
+
 
 
 
