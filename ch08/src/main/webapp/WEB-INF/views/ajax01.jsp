@@ -14,7 +14,7 @@ $(function(){
 		$.ajax({
 			url: "${pageContext.request.contextPath }/api/01",
 			async: true,
-			type: "get",
+			type: "get", 
 			dataType: "json",
 			success: function(response){
 				var htmls = "";
